@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  - name: Check if reboot is required
+    script: /home/ans000/amal/papa/papa_triage.yml
+    register: output
+  - debug: var=output.stdout_lines
+
